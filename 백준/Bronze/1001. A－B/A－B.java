@@ -1,17 +1,16 @@
-import java.util.Scanner;
- 
-public class Main {
-    public static void main(String[] args){
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main{
+    public static void main(String[] args)throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
         
-        Scanner scan = new Scanner(System.in);
-        int A = scan.nextInt();
-        int B = scan.nextInt();
-   
-        while(A<=0 || A>=10 || B<=0 || B>=10) {
-            A = scan.nextInt();
-            B = scan.nextInt();            
-        }
+        int A = Integer.parseInt(st.nextToken());
+        int B = Integer.parseInt(st.nextToken());
         
         System.out.println(A-B);
+        
     }
 }
